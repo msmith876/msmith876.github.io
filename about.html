@@ -1,0 +1,134 @@
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv="X-UA-Compatible" content = "IE=edge">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href ="style.css">
+        <link href = "//use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
+    </head>
+    <body> 
+        <div id ="header">
+
+               <nav>
+                <img src="photos/Logo.jpg" class="Logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                   
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick = "openmenu()"></i>
+                
+               </nav> 
+
+        </div>
+<!-- ------------------------About------------------- -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src ="photos/user.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p class ="info-paragraph"> I am a dedicated student at Kennesaw State University, presently engaged in the pursuit of a Bachelor's degree in Computer Science, specializing in Cybersecurity. Additionally, I am an active participant in the esteemed "Double Owl Program," which affords me the unique opportunity to concurrently work towards a Master's degree in Cybersecurity, complementing my primary computer science curriculum.
+                        </p>
+                        <br>
+                        <p class = "info-paragraph">
+                            In addition to my formal education at Kennesaw State University, I am further enhancing my knowledge and skills by enrolling in Google's Cybersecurity certification course on Coursera. This course serves as a valuable complement to my academic pursuits. My academic journey and personal interests have equipped me with proficiency in various programming languages, including HTML, CSS, Java, C++, and Python.
+                        </p>
+                        <br>
+                        <p class = "info-paragraph">
+                            Furthermore, I have gained practical experience collaborating with a team of developers while interning at CGI, where I applied software development methodologies, with a particular emphasis on Software Development Lifecycle (SDLC). Additionally, I have actively engaged in other software development practices, such as unit testing, integration testing, and Continuous Integration/Continuous Deployment (CI/CD) processes.
+                            Armed with my academic qualifications and hands-on experience, my aspirations are geared toward a promising career path. Ultimately, I aspire to contribute to the field as either a software developer or a security analyst.
+                        </p>
+                        <div class="tab-titles">
+                            <p class ="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                            <p class ="tab-links" onclick="opentab('Experience')">Experience</p>
+                            <p class ="tab-links" onclick="opentab('Education')">Education</p>
+                            
+                        </div>
+                        <!-- skills-->
+                        <div class="tab-contents active-tab" id="Skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Functional Testing and Implementation</li>
+                                <li><span>Web Development</span><br>Design Optimization</li>
+                                <li><span>Software Developer</span><br>C++, Java, Html/CSS, Python</li>
+                                <li><span>Software Developer</span><br>Database and API management</li>
+                            </ul>
+                        </div>
+                        <!-- experience-->
+                        <div class="tab-contents" id="Experience">
+                            <ul>
+                                <li><span>CGI: May 2022-Aug 2022 Development Intern</span><br>Database and API maintenance, <br>Helped develop and improve front-end programs under supervision of qualified software engineering team <br>
+                                    Resolved issues related to cloud computing, API design and front-end UI engineering </li>
+                                <li><span>Kennesaw State University: May 2023-June 2023 HAC immersion Program Teacher's Assistant</span><br>Assisted the professor in teaching a week long technical course on software engineering, Cybersecurity and machine learning.</li>
+                                
+                            </ul>
+                        </div>
+                        <!-- education-->
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>2019-current</span><br>Computer Science at Kennesaw State University, Kennesaw, Georgia </li>
+                                <li><span>Fall 2022-Spring 2023</span><br>Computer Science at Linnaeus University, Växjö, Sweden</li>
+                                <li><span>2023-current</span><br>Cybersecurity Certificate at Coursera, Google</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+              
+ <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }  
+    
+ </script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right= "0";
+    }
+    function closemenu(){
+        sidemenu.style.right= "-200px";
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx_F496XZ5WcLamGye64X7ExD-VC9Rni1cM-n0V4WaR_aO-iMXbb1Fp_A4Ay6gierJ3/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML= "Message Sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML= ""
+            
+        },5000)
+        form.reset()
+    })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
