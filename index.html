@@ -1,64 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset = "UTF-8">
-        <meta http-equiv="X-UA-Compatible" content = "IE=edge">
-        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-        <title>Personal Portfolio Website</title>
-        <link rel="stylesheet" href ="style.css">
-        <link href = "//use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
-    </head>
-    <body> 
-        <div id ="homeheader">
-
-               <nav>
-                <img src="Photos/Logo.jpg" class="Logo">
-                <ul id="sidemenu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                 
-                    <li><a href="contact.html">Contact</a></li>
-                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick = "openmenu()"></i>
-                
-               </nav> 
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="//use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
+</head>
+<body class="home">
+    <div id="homeheader">
+        <div class="header-text">
+            <h1>Maximus A. Smith</h1>
         </div>
-
-<!-- Portfolio----------------------------------------------------------->
-<main>
-<div id="portfolio">
-    <div class="container">
-        <h1 class ="sub-title"> My Work</h1>
-        <div class="row">
-            <div class="portfolio-col-1">
-                <div class="work-list">
-                    <div class="work">
-                        <img src="photos/work-1.png">
-                        <div class="layer">
-                            <h3>UI/UX design - CGI</h3>
-                            <p>Helped to impliment the Admin Webpage for Inspiredu </p>
-                            <!--<a href=""><i class="fa-solid fa-up-right-from-square"></i></a>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-col-2">
-                <div class="work">
-                    <img src="Photos/IMG_8274.PNG">
-                    <div class="layer">
-                        <h3>Application design - Senior Project</h3>
-                        <p>Helped to impliment the Admin Webpage for Inspiredu </p>
-                        
-                        <!--<a href=""><i class="fa-solid fa-up-right-from-square"></i></a>-->
-                    </div>
-                </div>
-
-            </div>
-            
-        </div>
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-
-</div>
-</main>
+</body>
+</html>
