@@ -335,60 +335,72 @@ body.home .fa-xmark {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     padding: 50px;
-    height: 100vh; /* Full viewport height for vertical centering */
+    padding-top: 100px; /* Add top padding to prevent overlap with the nav bar */
+    height: calc(100vh - 100px); /* Adjust height to account for the nav bar */
     flex-direction: column; /* Align items in a column */
+    box-sizing: border-box; /* Include padding in the height calculation */
 }
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
+
 .contact-container {
     background-color: #333; /* Dark grey background for the container */
     padding: 30px; /* Padding for spacing inside the container */
     border-radius: 8px; /* Rounded corners for the container */
+    margin-top: 20px; /* Optional: Additional spacing from the top */
 }
+
 .sub-title {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.row-contact{
+.row-contact {
     display: flex;
     justify-content: space-between;
     width: 100%;
-   
 }
 
-.row-work{
+.row-work {
     display: flex;
     justify-content: space-around;
     width: 100%;
     max-width: 800px; /* Limit the maximum width */
 }
 
-.contact-left, .contact-right {
+.contact-left,
+.contact-right {
     flex: 1;
 }
+
 .contact-left {
     font-family: "Font Awesome 5 Free";
     text-align: left;
 }
+
 .contact-right {
     text-align: left;
 }
+
 .contact-left p {
     margin-top: 30px;
 }
+
 .contact-left p i {
     color: #1E4258;
     margin-right: 15px;
     font-size: 25px;
 }
+
 .social-icons {
     margin-top: 30px;
 }
+
 .social-icons a {
     text-decoration: none;
     font-size: 30px;
@@ -397,10 +409,12 @@ body.home .fa-xmark {
     display: inline-block;
     transition: transform 0.5s;
 }
+
 .social-icons a:hover {
     color: #333;
     transform: translateY(-5px);
 }
+
 .btn {
     display: block;
     margin: 50px auto;
@@ -412,17 +426,22 @@ body.home .fa-xmark {
     color: #fff;
     transition: background 0.5s;
 }
+
 .btn:hover {
     background: #1E4258;
 }
+
 .btn.btn2 {
     display: inline-block;
     background: #1E4258;
 }
+
 .contact-right form {
     width: 100%;
 }
-form input, form textarea {
+
+form input,
+form textarea {
     width: 100%;
     border: 0;
     outline: none;
@@ -433,12 +452,14 @@ form input, form textarea {
     font-size: 18px;
     border-radius: 6px;
 }
+
 form .btn2 {
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
 }
+
 .copyright {
     width: 100%;
     text-align: center;
@@ -447,6 +468,7 @@ form .btn2 {
     font-weight: 300;
     margin-top: 20px;
 }
+
 /*--------------css fir small screen----*/
 nav .fa-solid{
     display: none;
