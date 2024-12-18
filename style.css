@@ -327,7 +327,8 @@ body.home .fa-xmark {
 /*-------contact------- */
 .pdf-button {
             display: inline-block;
-            padding: 10px 20px;
+            margin; 50px auto;
+            padding: 14px 50px;
             background: #1E4258;
             color: white;
             text-decoration: none;
