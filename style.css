@@ -247,6 +247,7 @@ body.home .fa-xmark {
     overflow: hidden;
     margin-bottom: 20px; /* Space between work items */
     text-align: center;
+    max-height: 840px;
 }
 
 .work img {
