@@ -340,6 +340,9 @@ body.home .fa-xmark {
 .pdf-button:hover {
             background-color: #0056b3;
         }
+a:hover i{
+    color:#0056b3;
+}
 #contact {
     display: flex;
     justify-content: center;
