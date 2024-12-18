@@ -9,6 +9,7 @@
     <link href="//use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Header Section -->
     <div id="header">
         <nav>
             <ul id="sidemenu">
@@ -22,7 +23,7 @@
         </nav>
     </div>
 
-    <!-- contact -->
+    <!-- Contact Section -->
     <div id="contact">
         <div class="contact-container">
             <div class="contact-box">
@@ -30,13 +31,13 @@
                     <h1 class="sub-title">Contact Me</h1>
                     <div class="row">
                         <div class="contact-left">
-                            <p><i class="fa-regular fa-paper-plane"></i>m2max735work@gmail.com</p>
-                            <p><i class="fa-solid fa-phone"></i>770-851-6070</p>
-                            <p><i class="fa-solid fa-location-dot"></i>Atlanta, Georgia</p>
+                            <p><i class="fa-regular fa-paper-plane"></i> m2max735work@gmail.com</p>
+                            <p><i class="fa-solid fa-phone"></i> 770-851-6070</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Atlanta, Georgia</p>
                             <div class="social-icons">
                                 <a target="_blank" href="https://www.linkedin.com/in/maximus-smith-714ab4227/"><i class="fa-brands fa-linkedin"></i></a>
                             </div>
-                            <a href="photos/Maximus _Smith_Resume_2024.pdf" download class="btn btn2">Resume</a>
+                            <a href="photos/Maximus_Smith_Resume_2024.pdf" download class="btn btn2">Resume</a>
                         </div>
                         <div class="contact-right">
                             <form name="submit-to-google-sheet">
@@ -53,6 +54,7 @@
         </div>
     </div>
 
+    <!-- JavaScript for Sidebar Menu -->
     <script>
         var sidemenu = document.getElementById("sidemenu");
 
@@ -65,23 +67,34 @@
         }
     </script>
 
+    <!-- JavaScript for Google Script Form Submission -->
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbx_F496XZ5WcLamGye64X7ExD-VC9Rni1cM-n0V4WaR_aO-iMXbb1Fp_A4Ay6gierJ3/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-      
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx_F496XZ5WcLamGye64X7ExD-VC9Rni1cM-n0V4WaR_aO-iMXbb1Fp_A4Ay6gierJ3/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+
         form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-                    msg.innerHTML = "Message Sent Successfully"
-                    setTimeout(function() {
-                        msg.innerHTML = ""
-                    }, 5000)
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
-        })
+            e.preventDefault(); // Prevent the default form submission
+
+            fetch(scriptURL, { 
+                method: 'POST', 
+                body: new FormData(form) 
+            })
+            .then(response => {
+                msg.innerHTML = "Message Sent Successfully!";
+                setTimeout(() => {
+                    msg.innerHTML = ""; // Clear message after 5 seconds
+                }, 5000);
+                form.reset(); // Clear the form inputs
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                msg.innerHTML = "Failed to send message. Please try again.";
+                setTimeout(() => {
+                    msg.innerHTML = ""; // Clear error message after 5 seconds
+                }, 5000);
+            });
+        });
     </script>
 </body>
 </html>
