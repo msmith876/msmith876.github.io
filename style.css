@@ -233,7 +233,48 @@ body.home .fa-xmark {
 #portfolio {
     padding: 0px 0;
 }
+.image-link {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
 
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease; /* Smooth transition for greyscale */
+}
+
+.image-container .hover-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 1rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.image-container:hover img {
+  filter: grayscale(100%);
+}
+
+.image-container:hover .hover-message {
+  opacity: 1;
+}
 
 .work-list {
     display: grid;
