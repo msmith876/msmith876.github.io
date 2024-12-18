@@ -419,10 +419,7 @@ body.home .fa-xmark {
     display: inline-block;
     transition: transform 0.5s;
 }
-.social-icons a:hover {
-    color: #333;
-    transform: translateY(-5px);
-}
+
 
 .btn {
     display: block;
