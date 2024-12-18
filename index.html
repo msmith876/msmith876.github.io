@@ -9,9 +9,14 @@
     <link href="//use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
 </head>
 <body class="home">
+
+    <!-- Particles background -->
+    <div id="particles-js"></div>
+
     <div id="homeheader">
         <div class="header-text">
             <h1>Maximus A. Smith</h1>
+            <p>Your professional portfolio</p>
         </div>
         <nav>
             <ul id="sidemenu">
@@ -21,5 +26,81 @@
             </ul>
         </nav>
     </div>
+
+    <script>
+        // Initialize Particles.js with the provided particle configuration
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#ffffff"
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#000000"
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "window",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+
 </body>
 </html>
