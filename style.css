@@ -441,6 +441,10 @@ body.home .fa-xmark {
     display: inline-block;
     background: #1E4258;
 }
+.btn.btn2:hover{
+     background-color: #0056b3;
+}
+
 
 .contact-right form {
     width: 100%;
