@@ -560,3 +560,156 @@ nav .fa-solid{
     margin-top: -40px;
     display: block;
 }
+@media only screen and (max-width: 768px) {
+    #header {
+        background-image: url(photos/tablet-background.png);
+    }
+    .header-text {
+        margin-top: 20%;
+        font-size: 18px;
+    }
+    nav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: static;
+        width: 100%;
+        background: none;
+        height: auto;
+    }
+    nav ul li {
+        margin: 15px 0;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+    #about {
+        padding: 20px;
+    }
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+    .about-col-1 img {
+        max-width: 100%;
+        height: auto;
+    }
+    .grey-container {
+        margin: 10px auto;
+        padding: 15px;
+    }
+    .sub-title {
+        font-size: 24px;
+    }
+    .tab-links {
+        font-size: 14px;
+        margin-right: 20px;
+    }
+    .portfolio-col-1, .portfolio-col-2 {
+        flex-basis: 100%;
+    }
+    .description {
+        padding: 15px;
+    }
+    .work-list {
+        grid-template-columns: 1fr;
+    }
+    .work {
+        margin-bottom: 10px;
+    }
+    .image-container img {
+        width: 100%;
+    }
+    .contact-container {
+        padding: 20px;
+    }
+    form input,
+    form textarea {
+        font-size: 16px;
+    }
+    form .btn2 {
+        font-size: 16px;
+    }
+    .copyright {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header-text {
+        font-size: 14px;
+        margin-top: 30%;
+    }
+    .header-text h1 {
+        font-size: 24px;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    nav ul li a {
+        font-size: 14px;
+    }
+    .about-col-1, .about-col-2 {
+        padding: 10px;
+    }
+    .grey-container {
+        padding: 10px;
+    }
+    .sub-title {
+        font-size: 20px;
+    }
+    .tab-links {
+        font-size: 12px;
+        margin-right: 10px;
+    }
+    form input,
+    form textarea {
+        font-size: 14px;
+    }
+    form .btn2 {
+        font-size: 14px;
+    }
+}
+
+/* Further Enhancements for Super Small Screens */
+@media only screen and (max-width: 360px) {
+    .header-text {
+        font-size: 12px;
+        margin-top: 40%;
+    }
+    .header-text h1 {
+        font-size: 20px;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    nav ul li a {
+        font-size: 12px;
+    }
+    .about-col-1, .about-col-2 {
+        padding: 5px;
+    }
+    .grey-container {
+        padding: 5px;
+    }
+    .sub-title {
+        font-size: 16px;
+    }
+    .tab-links {
+        font-size: 10px;
+        margin-right: 5px;
+    }
+    form input,
+    form textarea {
+        font-size: 12px;
+    }
+    form .btn2 {
+        font-size: 12px;
+    }
+}
